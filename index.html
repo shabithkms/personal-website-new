@@ -541,7 +541,8 @@
 																			data-element_type="widget"
 																			data-widget_type="bolby-button.default">
 																			<div class="elementor-widget-container">
-																				<a href="https://drive.google.com/file/d/117-pX-tKlYf1JsFZvURXOfZ0GUAgCbdI/view?usp=sharing" class="btn btn-default"
+																				<a href="https://drive.google.com/file/d/117-pX-tKlYf1JsFZvURXOfZ0GUAgCbdI/view?usp=sharing"
+																					class="btn btn-default"
 																					target="_blank" rel="nofollow">
 																					Download CV </a>
 																			</div>
@@ -1443,6 +1444,10 @@
 																		aria-atomic="true"></p>
 																	<ul></ul>
 																</div>
+
+
+																<!-- form -->
+
 																<form action="" id="submit-form">
 																	<!-- class="wpcf7-form init"
 																	novalidate="novalidate" data-status="init"> 
@@ -1466,13 +1471,14 @@
 																			</p>
 																			<div class="form-group">
 																				<span
-																					class="wpcf7-form-control-wrap your-name"><input
+																					class="wpcf7-form-control-wrap your-name">
+																					<input
 																						type="text" name="name" value=""
 																						size="40" id=""
 																						class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
 																						aria-required="true"
 																						aria-invalid="false"
-																						placeholder="Your name" /></span>
+																						placeholder="Your name" required /></span>
 																			</div>
 																		</div>
 																		<div class="column col-md-6">
@@ -1480,13 +1486,14 @@
 																			</p>
 																			<div class="form-group">
 																				<span
-																					class="wpcf7-form-control-wrap your-email"><input
+																					class="wpcf7-form-control-wrap your-email">
+																					<input
 																						type="email" name="email"
 																						id="email" value="" size="40"
 																						class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control"
 																						aria-required="true"
 																						aria-invalid="false"
-																						placeholder="Email address" /></span>
+																						placeholder="Email address" required/></span>
 																			</div>
 																		</div>
 																		<div class="column col-md-12">
@@ -1494,13 +1501,14 @@
 																			</p>
 																			<div class="form-group">
 																				<span
-																					class="wpcf7-form-control-wrap subject"><input
+																					class="wpcf7-form-control-wrap subject">
+																					<input
 																						type="text" name="subject"
 																						id="subject" value="" size="40"
 																						class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
 																						aria-required="true"
 																						aria-invalid="false"
-																						placeholder="Subject" /></span>
+																						placeholder="Subject" required /></span>
 																			</div>
 																		</div>
 																		<div class="column col-md-12">
@@ -1508,13 +1516,14 @@
 																			</p>
 																			<div class="form-group">
 																				<span
-																					class="wpcf7-form-control-wrap your-message"><textarea
+																					class="wpcf7-form-control-wrap your-message">
+																					<textarea
 																						name="message" cols="40"
 																						rows="5" id="message"
 																						class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control"
 																						aria-required="true"
 																						aria-invalid="false"
-																						placeholder="Message"></textarea></span>
+																						placeholder="Message" required></textarea></span>
 																			</div>
 																		</div>
 																	</div>
@@ -1646,24 +1655,14 @@
 		id='elementor-frontend-js'></script>
 	<script src='wp-content/plugins/elementor/assets/js/preloaded-modules.minedb1.js?ver=3.4.4'
 		id='preloaded-modules-js'></script>
-	<script>
-		$("#submit-form").submit((e) => {
-			e.preventDefault()
-			$.ajax({
-				url: "https://script.google.com/macros/s/AKfycbzd4DrtpnKeG_ZD0Wf-MTOFUl2x8NjjKrCq0Ce1I6bGxTURf1IlTK4Si0AMNuM3WrQA0A/exec",
-				data: $("#submit-form").serialize(),
-				method: "post",
-				success: function (response) {
-					alert("Form submitted successfully")
-					window.location.reload()
-					//window.location.href="https://google.com"
-				},
-				error: function (err) {
-					alert("Something Error")
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+	<script src="script.js"></script>
 
-				}
-			})
-		})
+	<script>
+	
 	</script>
 
 </body>
